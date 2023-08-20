@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Site</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <div class="content hidden">
+        <!-- wrapper will act as body, for scrolling (another layer) -->
+        <div class="wrapper">
+            <header class="text-center">
+                <!-- <img src="images/mountains.jpeg" class="background"> -->
+                <!-- <img src="images/trees.png" class="foreground"> -->
+                <h1 class="title title-slide-up">Insert name here...</h1>
+                <!-- <h3 class="background title-slide-up">Photo/Video | Drumbots | Vegas Golden Knights</h3> -->
+                <h2 class="foreground foreground-slide-up">Las Vegas, Nevada <br> Photo/Video | Website Development | Software Solutions </h2>
+            </header>
+    
+            <!-- button to scroll to speciic place -->
+            <button id="scroll_images_btn" class="btn btn-primary my-3">Images</button>
+            <button id="scroll_add_sec_btn" class="btn btn-primary my-3">Additional Section</button>
+            <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
+
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="text-center"><strong>About</strong></h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, cum. 
+                        Porro asperiores ut, ipsa iusto corrupti magnam reprehenderit. Impedit dolor numquam, 
+                        maiores iusto quaerat labore? Consectetur delectus, expedita similique doloribus aspernatur 
+                        et! Incidunt laboriosam dolorum sit omnis quisquam ut asperiores ipsum adipisci iste 
+                        quaerat? Sit rerum repellat quidem eligendi voluptate. Autem minima corporis qui quos 
+                        nostrum explicabo omnis, atque non odio minus eligendi consequuntur, distinctio labore 
+                        sint, voluptatem saepe dolorum animi voluptates est nisi? Nobis illo eum beatae rerum, 
+                        iste reprehenderit similique itaque mollitia, ad, suscipit eveniet magnam praesentium 
+                        totam iusto cumque animi ab dignissimos eaque provident?
+                    </p>
+                </div>
+            </section>
+                
+            <section class="image-section bg-dark py-5">
+                <h2 class="text-center text-light">Image Section</h2>
+                <div class="image-container-row">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 mb-4">
+                            <div class="image-container">
+                                <img src="images/conure.jpeg" class="animated-image">
+                                <p class="caption">Sunday Conure, 20 April 2021</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="image-container">
+                                <img src="images/africangrey.jpeg" class="animated-image">
+                                <p class="caption">African Grey, South Africa, 2018</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="image-container">
+                                <img src="images/macaw.jpeg" class="animated-image">
+                                <p class="caption">Macaw, Vegas Golden Knights, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="py-5 additional-section">
+                <div class="container">
+                    <h1 class="text-center">Additional Section</h1>
+                    <!-- <h5 class="text-center"><i>Hey here's a thing</i></h5> -->
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur 
+                        dolorum fugit architecto totam. Reiciendis, consectetur laborum, esse 
+                        consequuntur mollitia tempora, <strong>porro nulla natus</strong> sint ullam tenetur asperiores 
+                        accusantium iste doloremque maiores? Delectus possimus voluptas enim sequi? 
+                        Voluptas corporis maxime at facere perferendis reiciendis rerum commodi aut 
+                        laboriosam nulla ex esse, dolorum deleniti tenetur nihil quos ut enim similique 
+                        aperiam, libero sapiente, delectus vitae eaque sequi. Eligendi, fuga tenetur? 
+                        Nulla ex mollitia quaerat. Quis ex tempore quasi error, doloremque molestias 
+                        voluptatem perspiciatis fugiat? Et quos iure quo nulla! Incidunt excepturi quod 
+                        facere optio illo consectetur sapiente porro recusandae saepe, veniam cumque!
+                    </p>
+                    <h5><i>This does not include text-continer class</i></h5>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime 
+                        eius assumenda explicabo quibusdam corrupti aspernatur corporis? 
+                        Tempore quam quaerat sint unde corporis magni quae qui optio delectus 
+                        excepturi illo distinctio quisquam ullam est ab cum corrupti rem, 
+                        perferendis, repellendus illum omnis et! Suscipit harum optio reprehenderit 
+                        sed, consequuntur ipsum corporis!
+                    </p>
+    
+                    <h2><strong>Additional Secondary Header</strong></h2>
+                    <h5><i>Details</i></h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ratione?
+                    </p>
+                </div>
+                
+            </section>
+
+            <section class="py-5 contact-section">
+                <div class="contact-container">
+                    <h1 classs="text-center">Contact</h1>
+                    <p><i>insert contact info...</i></p>
+                </div>
+            </section>
+    
+            <!-- <h2>Another image section</h2>
+            <img src="images/puppies1.jpeg" class="animated-image">
+            <img src="images/puppies2.jpeg" class="animated-image">
+            <img src="images/puppies3.jpeg" class="animated-image"> -->
+    
+    
+            
+    
+            <footer class="text-center py-4">
+                <!-- copyright -->
+                <div class="text-muted">&copy; 2023 INSERT NAME HERE. All rights reserved.</div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Add jQuery (required by Bootstrap) from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Add Bootstrap JavaScript from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- external js file -->
+    <script src="script.js"></script>
+</body>
+</html>
