@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Site</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="loading-screen">
@@ -16,11 +16,9 @@
         <!-- wrapper will act as body, for scrolling (another layer) -->
         <div class="wrapper">
             <header class="text-center">
-                <!-- <img src="images/mountains.jpeg" class="background"> -->
-                <!-- <img src="images/trees.png" class="foreground"> -->
-                <h1 class="title title-slide-up">Insert name here...</h1>
-                <!-- <h3 class="background title-slide-up">Photo/Video | Drumbots | Vegas Golden Knights</h3> -->
-                <h2 class="foreground foreground-slide-up">Las Vegas, Nevada <br> Photo/Video | Website Development | Software Solutions </h2>
+                <img src="images/code_background.png" class="background">
+                <h1 class="title title-slide-up">Willie Alcaraz</h1>
+                <h2 class="foreground">Las Vegas, Nevada <br> Photo/Video | Website & Software Developement | <span style="color: #B10202;">UNLV</span> Computer Science</h2>
             </header>
     
             <!-- button to scroll to speciic place -->
@@ -29,43 +27,64 @@
             <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
 
             <section class="py-5">
-                <div class="container">
+                <div class="container-fluid">
                     <h1 class="text-center"><strong>About</strong></h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, cum. 
-                        Porro asperiores ut, ipsa iusto corrupti magnam reprehenderit. Impedit dolor numquam, 
-                        maiores iusto quaerat labore? Consectetur delectus, expedita similique doloribus aspernatur 
-                        et! Incidunt laboriosam dolorum sit omnis quisquam ut asperiores ipsum adipisci iste 
-                        quaerat? Sit rerum repellat quidem eligendi voluptate. Autem minima corporis qui quos 
-                        nostrum explicabo omnis, atque non odio minus eligendi consequuntur, distinctio labore 
-                        sint, voluptatem saepe dolorum animi voluptates est nisi? Nobis illo eum beatae rerum, 
-                        iste reprehenderit similique itaque mollitia, ad, suscipit eveniet magnam praesentium 
-                        totam iusto cumque animi ab dignissimos eaque provident?
+                        Hello, and welcome to my website. <br>
+                        I am a student at <span style="color: #B10202;">University of Nevada Las Vegas</span>
+                        studying computer science, where I am actively pursuing a Bachelor of Science
+                        degree. The world of technology continues to grow at an exponential rate,
+                        while the demand for software solutions continue to rise proportionately.
+                        <br><br>
+                        Actively tutoring at <span style="color: #004990">College of Southern Nevada</span>
+                        Centers for Academic Success mentoring CS students, allowing them to excel
+                        in their studies and achieve a better understanding of programming languages, concepts,
+                         and algorithms.
+                        <br><br>
+                        Currently involved in the <strong>Drumbots</strong>, a world-renowned international LED 
+                        percussion act at the heart of Las Vegas since 2017, well known as the official NHL drumline for
+                        <i>2023 Stanley Cup Champions</i>, the <span style="color: #B4975A">Vegas Golden Knights</span>.
                     </p>
                 </div>
             </section>
                 
-            <section class="image-section bg-dark py-5">
-                <h2 class="text-center text-light">Image Section</h2>
+            <section class="image-section py-5">
+                <h2 class="text-center text-light">Images</h2>
                 <div class="image-container-row">
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 mb-4">
-                            <div class="image-container">
-                                <img src="images/conure.jpeg" class="animated-image">
-                                <p class="caption">Sunday Conure, 20 April 2021</p>
-                            </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="images/conure.jpeg" class="animated-image">
+                            <p class="caption">Sunday Conure, 20 April 2021</p>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="image-container">
-                                <img src="images/africangrey.jpeg" class="animated-image">
-                                <p class="caption">African Grey, South Africa, 2018</p>
-                            </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="images/africangrey.jpeg" class="animated-image">
+                            <p class="caption">African Grey, South Africa, 2018</p>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="image-container">
-                                <img src="images/macaw.jpeg" class="animated-image">
-                                <p class="caption">Macaw, Vegas Golden Knights, 2023</p>
-                            </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="images/vegas_greyscale.jpg" class="animated-image">
+                            <p class="caption">Las Vegas, image from iStock, 2021</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="images/macaw.jpeg" class="animated-image">
+                            <p class="caption">Macaw, Vegas Golden Knights, 2023</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="images/macaw.jpeg" class="animated-image">
+                            <p class="caption">Another Macaw parrot</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="image-container">
+                            <img src="images/conure.jpeg" class="animated-image">
+                            <p class="caption">Photo of a Conure, to showcase this content section</p>
                         </div>
                     </div>
                 </div>
@@ -73,7 +92,7 @@
     
             <section class="py-5 additional-section">
                 <div class="container">
-                    <h1 class="text-center">Additional Section</h1>
+                    <h1>Current Projects</h1>
                     <!-- <h5 class="text-center"><i>Hey here's a thing</i></h5> -->
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur 
@@ -96,12 +115,6 @@
                         perferendis, repellendus illum omnis et! Suscipit harum optio reprehenderit 
                         sed, consequuntur ipsum corporis!
                     </p>
-    
-                    <h2><strong>Additional Secondary Header</strong></h2>
-                    <h5><i>Details</i></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ratione?
-                    </p>
                 </div>
                 
             </section>
@@ -112,18 +125,21 @@
                     <p><i>insert contact info...</i></p>
                 </div>
             </section>
+
+            <section class="py-5">
+                <div class="quote-container">
+                    <p>
+                        <span class="custom-font">"Anyone who has never made a mistake has never tried anything new." 
+                        <br>
+                        - <i>Albert Einstein</i>
+                        </span>
+                    </p>
+                </div>
+            </section>
     
-            <!-- <h2>Another image section</h2>
-            <img src="images/puppies1.jpeg" class="animated-image">
-            <img src="images/puppies2.jpeg" class="animated-image">
-            <img src="images/puppies3.jpeg" class="animated-image"> -->
-    
-    
-            
-    
-            <footer class="text-center py-4">
+            <footer class="text-center">
                 <!-- copyright -->
-                <div class="text-muted">&copy; 2023 INSERT NAME HERE. All rights reserved.</div>
+                <div class="copyright-footer">&copy; 2023 Willie Alcaraz</div>
             </footer>
         </div>
     </div>

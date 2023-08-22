@@ -6,7 +6,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Show loading screen
   const loadingScreen = document.querySelector(".loading-screen");
-  const foreground = document.querySelector(".title");
+  const foreground = document.querySelector(".foreground");
   const content = document.querySelector(".content");
   const title = document.querySelector(".title");
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       content.classList.remove("hidden");
       content.classList.add("content-slide-up");
     }, 0); // delay time from load to main
-  }, 1500) // delay time for loading animation
+  }, 500) // delay time for loading animation
 
   const imageSections = document.querySelectorAll(".image-section");
   const firstImageSection = document.querySelector(".image-section");

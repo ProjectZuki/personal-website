@@ -7,7 +7,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
+  
 /* take wrapper class, make it height of screen to emulate parallax */
 .wrapper {
     /* height is exact size of screen */
@@ -28,6 +28,7 @@ html {
     background-color: #333;
   }
   
+  /* This is honestly just a fake loading bar for the looks */
   .loader {
     width: 10%; /* 10% width of the screen */
     height: 5px; /* Height of the loading bar */
@@ -35,14 +36,14 @@ html {
     border-radius: 10px; /* add a rounded edge */
   }
 
-/* Style the animated loading bar */
+/* loading bar style */
 .loader::before {
     content: '';
     display: block;
     width: 0;
     height: 100%;
     background-color: #414346; /* Color of the loading progress */
-    animation: loading 1.5s ease-in-out infinite;
+    animation: loading .5s ease-in-out infinite;
     border-radius: 10px; /* match rounded edge of .loader */
   }
   
@@ -72,36 +73,6 @@ header {
     z-index: -1;
 }
 
-.background {
-    /* things that are further away, appear to move slower */
-    transform: translateZ(-10px) scale(1);
-    background-size: cover;
-    margin-top: 1000px;
-}
-
-.foreground {
-    position: absolute;
-    margin-top: 1000px;
-    transform: translateZ(-5px) scale(1);
-    width: 100%;       /* Set the width to 100% of the container */
-    max-width: 100vw;  /* Limit the maximum width to the viewport width */
-    height: auto;      /* Maintain the aspect ratio */
-}
-
-.foreground-slide-up {
-    transform: translateZ(-10px) scale(1);
-    transition: transform 2s ease-in-out;
-}
-
-.background,
-.foreground {
-    position: absolute;
-    height: 100%;
-    width: 100vw;
-    /* object-fit: cover; */
-    z-index: -1;
-}
-
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;        /* font size for smaller screens */
@@ -117,6 +88,7 @@ header {
 
 .title {
     font-size: 3rem;
+    /* transform: translateZ(2px); */
     color: rgb(216, 215, 215);
     text-shadow: 0 0 5px black;
 }
@@ -142,6 +114,41 @@ header {
     animation: slideUpAnimation 2s ease-in-out;
 }
 
+.background {
+    /* things that are further away, appear to move slower */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    transform: translateZ(-4px) scale(1.6);
+    filter: blur(5px);
+    /* add fade out effect to image */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.foreground {
+    font-size: x-large;
+    color: #939393;
+    margin-top: 110vh;
+    transform: translateZ(-1px) scale(1);
+    width: 100%;       /* Set the width to 100% of the container */
+    max-width: 100vw;  /* Limit the maximum width to the viewport width */
+    height: auto;      /* Maintain the aspect ratio */
+    text-shadow: 0 0 5px black;
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    /* object-fit: cover; */
+    z-index: -1;
+}
+
 /* so far this part is unecessary */
 
 /* scroll_images_btn {
@@ -157,40 +164,92 @@ scroll_add_sec_btn {
 /**/
 
 .btn {
-    color: white;
-    background-color: #2395ca;
+    color: #333333;
+    background-color: #F5F5F5;
     border: none;
 }
 
 /* modify this to change the color of the highlight */
-/* .btn:hover,
+.btn:hover,
 .btn:focus {
-    background-color: #333;
+    background-color: #555555;
     color: white;
     border: none;
-} */
+}
 
-.container {
+.container-fluid {
     background-color: #333;
-    text-align: center;
+    text-align: left;
     font-size: x-large;
     color: white;
 }
 
-.contact-container {
-    background-color: white;
-    text-align: center;
-    font-size: medium;
-    color: #333;
+.container {
+    background-color: #333;
+    text-align: left;
+    font-size: x-large;
+    color: white;
 }
 
-.copyright-footer {
-    text-align: center;
-    /* adjust */
-    padding: 2rem 0;
-    color: #888;
+/* custom scroll bar */
+/* Hide the default scrollbar */
+.image-container-row::-webkit-scrollbar {
+    width: 0.5rem; /* Set the width of the scrollbar */
 }
 
+.image-container-row::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set the color of the scrollbar thumb */
+    border-radius: 10px; /* Add rounded corners to the thumb */
+}
+
+/* scrollbar color on hover */
+.image-container-row::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* scrollbar track */
+.image-container-row::-webkit-scrollbar-track {
+    /* hide scrollbar track */
+    background-color: transparent;
+}
+
+.image-section {
+    position: relative; /* Add relative positioning */
+    padding: 4rem 0;
+    overflow: hidden; /* Hide any overflowing content */
+
+    /* modify scroll bar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.image-container-row {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+.image-container {
+    margin-right: 10px;
+    flex: 0 0 auto;
+    position: relative; /* Add relative positioning */
+    min-width: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 3s, transform 3s;
+}
+
+
+/* Add hover effect for the caption */
+.image-container:hover .caption {
+    opacity: 1;
+}
 
 .image {
     width: 300px;
@@ -213,31 +272,17 @@ scroll_add_sec_btn {
     transition: opacity 0.3s;
 }
 
-/* Add hover effect for the caption */
-.image-container:hover .caption {
-    opacity: 1;
-}
+/* Adjust the size of the images for smaller screens */
+@media (max-width: 576px) {
+    .image-container {
+        margin-right: 5px; /* Adjust the margin for smaller spacing */
+    }
 
-.image-container-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.image-section {
-    /* amount of height required for the total space of this section */
-    height: auto;
-    padding: 4rem 0;
-    background-color: #333;
-    color: 333  ;
-}
-
-.image-container {
-    /* images in 3 columns w/ spacing */
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    position: relative;;
+    .animated-image {
+        max-width: 100%; /* Set maximum width to 100% */
+        height: auto;    /* Auto-adjust height to maintain aspect ratio */
+        width: auto;     /* Reset the width property */
+    }
 }
 
 .animated-image {
@@ -247,6 +292,19 @@ scroll_add_sec_btn {
     transform: translateX(-100px);
     /* opacity is how long it takes to fade in, transform is the animation */
     transition: opacity 3s, transform 3s;
+}
+
+.contact-container {
+    background-color: rgb(203, 203, 203);
+    text-align: center;
+    font-size: medium;
+    color: #333;
+}
+
+.copyright-footer {
+    margin-left: 10%;
+    text-align: left;
+    color: rgb(148, 148, 148);
 }
 
 .section {
@@ -259,4 +317,15 @@ scroll_add_sec_btn {
 .card {
     background-color: transparent;
     border: none;
+}
+
+/* Custom font imported from Google */
+.custom-font {
+    font-family: 'Cutive Mono', monospace;
+}
+
+.quote-container {
+    text-align: center;
+    font-size: large;
+    color: white;
 }
