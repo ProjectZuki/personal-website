@@ -191,6 +191,15 @@ scroll_add_sec_btn {
     color: white;
 }
 
+.self-image {
+    margin-top: 10%;
+    margin-left: 10%;
+    flex: 0 0 auto;
+    position: relative; /* Add relative positioning */
+    max-width: 700px;
+    max-height: 700px;
+}
+
 /* custom scroll bar */
 /* Hide the default scrollbar */
 .image-container-row::-webkit-scrollbar {
@@ -216,7 +225,7 @@ scroll_add_sec_btn {
 .image-section {
     position: relative; /* Add relative positioning */
     padding: 4rem 0;
-    overflow: hidden; /* Hide any overflowing content */
+    overflow: auto; /* Hide any overflowing content */
 
     /* modify scroll bar */
     scrollbar-width: none; /* Firefox */

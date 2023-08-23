@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Site</title>
+    <title>Willie Alcaraz | Software</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
 </head>
@@ -21,20 +21,30 @@
                 <h2 class="foreground">Las Vegas, Nevada <br> Photo/Video | Website & Software Developement | <span style="color: #B10202;">UNLV</span> Computer Science</h2>
             </header>
     
-            <!-- button to scroll to speciic place -->
-            <button id="scroll_images_btn" class="btn btn-primary my-3">Images</button>
-            <button id="scroll_add_sec_btn" class="btn btn-primary my-3">Additional Section</button>
+            <!-- button to scroll to speciic section in site -->
+            <button id="scroll_images_btn" class="btn btn-primary my-3">Gallery</button>
+            <button id="scroll_add_sec_btn" class="btn btn-primary my-3">Projects</button>
             <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
 
+            
+
             <section class="py-5">
+                <!-- animate image of self -->
+                <section class="image-section py-5">
+                    <div class="self-image">
+                        <div class="col-md-4 mb-4">
+                                <img src="images/self_paris.jpg" class="animated-image">
+                                <p class="caption">The team, Vegas Golden Knights Knightline</p>
+                        </div>
+                    </div>
+                </section>
                 <div class="container-fluid">
                     <h1 class="text-center"><strong>About</strong></h1>
                     <p>
-                        Hello, and welcome to my website. <br>
+                        Hello, and welcome.<br>
                         I am a student at <span style="color: #B10202;">University of Nevada Las Vegas</span>
                         studying computer science, where I am actively pursuing a Bachelor of Science
-                        degree. The world of technology continues to grow at an exponential rate,
-                        while the demand for software solutions continue to rise proportionately.
+                        degree.
                         <br><br>
                         Actively tutoring at <span style="color: #004990">College of Southern Nevada</span>
                         Centers for Academic Success mentoring CS students, allowing them to excel
@@ -44,56 +54,63 @@
                         Currently involved in the <strong>Drumbots</strong>, a world-renowned international LED 
                         percussion act at the heart of Las Vegas since 2017, well known as the official NHL drumline for
                         <i>2023 Stanley Cup Champions</i>, the <span style="color: #B4975A">Vegas Golden Knights</span>.
+                        <br><br>
+                        The world of technology continues to grow at an exponential rate, while the demand for software solutions, development, and engineering
+                        continue to rise proportionately. My unique experiences in the world of entertainment help influence a world
+                        that bridges creativity and innovation, fueling a desire for software solutions that meet current challenges
+                        and anticipate the needs of tomorrow's digital landscape.<br>
+                        I believe that the future of software thrives in a world that merges creativity and technology.
+                        <br><br>
                     </p>
                 </div>
             </section>
                 
             <section class="image-section py-5">
-                <h2 class="text-center text-light">Images</h2>
+                <h2 class="text-center text-light">Gallery</h2>
                 <div class="image-container-row">
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
-                            <img src="images/conure.jpeg" class="animated-image">
-                            <p class="caption">Sunday Conure, 20 April 2021</p>
+                            <img src="images/vgk_knghtline.jpg" class="animated-image">
+                            <p class="caption">The team, Vegas Golden Knights Knightline</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
-                            <img src="images/africangrey.jpeg" class="animated-image">
-                            <p class="caption">African Grey, South Africa, 2018</p>
+                            <img src="images/vgk_guy_fieri.JPG" class="animated-image">
+                            <p class="caption">Vegas Golden Knights Knightline with Guy Fieri, Flavortown, 2023</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
-                            <img src="images/vegas_greyscale.jpg" class="animated-image">
-                            <p class="caption">Las Vegas, image from iStock, 2021</p>
+                            <img src="images/drumbots_paris.JPG" class="animated-image">
+                            <p class="caption">Drumbots performance in Paris, France, 2018</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
-                            <img src="images/macaw.jpeg" class="animated-image">
-                            <p class="caption">Macaw, Vegas Golden Knights, 2023</p>
+                            <img src="images/drumbots_xs_gronk.JPG" class="animated-image">
+                            <p class="caption">Drumbots, XS Wynn with Rob Gronkowski, 2021</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
-                            <img src="images/macaw.jpeg" class="animated-image">
-                            <p class="caption">Another Macaw parrot</p>
+                            <img src="images/ceelo_toronto.jpg" class="animated-image">
+                            <p class="caption">Drumbots backstage before performing with CeeLo Green, Toronto, 2019</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
-                            <img src="images/conure.jpeg" class="animated-image">
-                            <p class="caption">Photo of a Conure, to showcase this content section</p>
+                            <img src="images/aspen_times.jpg" class="animated-image">
+                            <p class="caption">Front page, The Aspen Times, 2021</p>
                         </div>
                     </div>
                 </div>
             </section>
     
+            <!-- Container for additional details -->
             <section class="py-5 additional-section">
                 <div class="container">
                     <h1>Current Projects</h1>
-                    <!-- <h5 class="text-center"><i>Hey here's a thing</i></h5> -->
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur 
                         dolorum fugit architecto totam. Reiciendis, consectetur laborum, esse 
@@ -126,6 +143,7 @@
                 </div>
             </section>
 
+            <!-- Quote for the bottom of the webpage -->
             <section class="py-5">
                 <div class="quote-container">
                     <p>
@@ -137,19 +155,17 @@
                 </div>
             </section>
     
+            <!-- copyright -->
             <footer class="text-center">
-                <!-- copyright -->
                 <div class="copyright-footer">&copy; 2023 Willie Alcaraz</div>
             </footer>
         </div>
     </div>
 
-    <!-- Add jQuery (required by Bootstrap) from CDN -->
+    <!-- jQuery (required by Bootstrap) from CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Add Bootstrap JavaScript from CDN -->
+    <!-- Bootstrap JavaScript from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- external js file -->
     <script src="script.js"></script>
 </body>
