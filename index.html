@@ -15,33 +15,38 @@
     <div class="content hidden">
         <!-- wrapper will act as body, for scrolling (another layer) -->
         <div class="wrapper">
+            <div class="background">
+                <img src="images/code_background.png">
+            </div>
             <header class="text-center">
-                <img src="images/code_background.png" class="background">
                 <h1 class="title title-slide-up">Willie Alcaraz</h1>
-                <h2 class="foreground">Las Vegas, Nevada <br> Photo/Video | Website & Software Developement | <span style="color: #B10202;">UNLV</span> Computer Science</h2>
+                <h2 class="foreground">
+                    <span id="typing-text-line1"></span><br>
+                    <span id="typing-text-line2"></span>
+                    <span id="cursor-animation">|</span>
+                </h2>
             </header>
-    
-            <!-- button to scroll to speciic section in site -->
-            <button id="scroll_images_btn" class="btn btn-primary my-3">Gallery</button>
-            <button id="scroll_add_sec_btn" class="btn btn-primary my-3">Projects</button>
-            <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
 
-            
+            <div class="button-section">
+                <!-- button to scroll to speciic section in site -->
+                <button id="scroll_images_btn" class="btn btn-primary my-3">Gallery</button>
+                <button id="scroll_add_sec_btn" class="btn btn-primary my-3">Projects</button>
+                <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
+            </div>
 
             <section class="py-5">
                 <!-- animate image of self -->
                 <section class="image-section py-5">
                     <div class="self-image">
                         <div class="col-md-4 mb-4">
-                                <img src="images/self_paris.jpg" class="animated-image">
-                                <p class="caption">The team, Vegas Golden Knights Knightline</p>
+                            <img src="images/self_paris.jpg" class="animated-image">
                         </div>
                     </div>
                 </section>
-                <div class="container-fluid">
-                    <h1 class="text-center"><strong>About</strong></h1>
+                <h1 class="about-text-title">About</h1>
+                <div class="about-text">
                     <p>
-                        Hello, and welcome.<br>
+                        <i>Hello, and welcome.</i><br>
                         I am a student at <span style="color: #B10202;">University of Nevada Las Vegas</span>
                         studying computer science, where I am actively pursuing a Bachelor of Science
                         degree.
@@ -49,11 +54,14 @@
                         Actively tutoring at <span style="color: #004990">College of Southern Nevada</span>
                         Centers for Academic Success mentoring CS students, allowing them to excel
                         in their studies and achieve a better understanding of programming languages, concepts,
-                         and algorithms.
+                        and algorithms.
                         <br><br>
                         Currently involved in the <strong>Drumbots</strong>, a world-renowned international LED 
-                        percussion act at the heart of Las Vegas since 2017, well known as the official NHL drumline for
-                        <i>2023 Stanley Cup Champions</i>, the <span style="color: #B4975A">Vegas Golden Knights</span>.
+                        percussion act at the heart of Las Vegas since their beginning in 2016. They are well
+                        known as the <i>Knightline</i>, the official NHL drumline for <i>2023 Stanley Cup Champions</i>,
+                        the <span style="color: #B4975A">Vegas Golden Knights</span>. The Drumbots of Las Vegas also
+                        perform for several large-scale corporate clients for entertainment, such as Google, Microsoft,
+                        and many other companies both large and small.
                         <br><br>
                         The world of technology continues to grow at an exponential rate, while the demand for software solutions, development, and engineering
                         continue to rise proportionately. My unique experiences in the world of entertainment help influence a world
@@ -64,26 +72,30 @@
                     </p>
                 </div>
             </section>
-                
             <section class="image-section py-5">
                 <h2 class="text-center text-light">Gallery</h2>
+                <h5 class="text-center text-light">
+                    <p>
+                        <i>Below are photos of exceptional work performed by our team at Drumbots.</i>
+                    </p>
+                </h5>
                 <div class="image-container-row">
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
                             <img src="images/vgk_knghtline.jpg" class="animated-image">
-                            <p class="caption">The team, Vegas Golden Knights Knightline</p>
+                            <p class="caption">Photo with the team, Vegas Golden Knights Knightline</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
                             <img src="images/vgk_guy_fieri.JPG" class="animated-image">
-                            <p class="caption">Vegas Golden Knights Knightline with Guy Fieri, Flavortown, 2023</p>
+                            <p class="caption">Knightline with Guy Fieri, Flavortown, 2023</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
                             <img src="images/drumbots_paris.JPG" class="animated-image">
-                            <p class="caption">Drumbots performance in Paris, France, 2018</p>
+                            <p class="caption">Drumbots, Ligue nationale de basket. Paris, France, 2018</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">
@@ -95,7 +107,7 @@
                     <div class="col-md-4 mb-4">
                         <div class="image-container">
                             <img src="images/ceelo_toronto.jpg" class="animated-image">
-                            <p class="caption">Drumbots backstage before performing with CeeLo Green, Toronto, 2019</p>
+                            <p class="caption">Drumbots and CeeLo Green, Toronto, 2019</p>
                         </div>
                     </div>
                     <div class="col-md-4 mb-4">

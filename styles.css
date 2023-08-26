@@ -16,7 +16,7 @@ html {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
-    background-color: black;
+    background-color: rgb(35, 35, 35);
 }
 
 /* Add the following styles for the loading bar */
@@ -115,7 +115,7 @@ header {
 }
 
 .background {
-    /* things that are further away, appear to move slower */
+    /* Existing styles */
     position: absolute;
     top: 0;
     left: 0;
@@ -123,11 +123,38 @@ header {
     height: auto;
     object-fit: cover;
     object-position: center top;
-    transform: translateZ(-4px) scale(1.6);
+    transform: translateZ(-4px) scale(1.7);
     filter: blur(5px);
-    /* add fade out effect to image */
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: -1; /* Place the background image behind other content */
+    overflow: hidden;
 }
+
+.background::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    /* gradient for bottom fade */
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(35, 35, 35, 1)); 
+    pointer-events: none; /* Allow interactions with elements beneath */
+}
+
+.cursor-animation {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
 
 .foreground {
     font-size: x-large;
@@ -163,7 +190,12 @@ scroll_add_sec_btn {
 
 /**/
 
+.button-section {
+    margin-left: 50px;
+}
+
 .btn {
+    margin-left: 1px;
     color: #333333;
     background-color: #F5F5F5;
     border: none;
@@ -175,6 +207,21 @@ scroll_add_sec_btn {
     background-color: #555555;
     color: white;
     border: none;
+}
+
+.about-text-title {
+    /* text-align: left; */
+    margin-left: 150px;
+    margin-bottom: 20px;
+    color: rgb(162, 162, 162);
+}
+
+.about-text {
+    text-align: left;
+    font-size: x-large;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: white;
 }
 
 .container-fluid {
@@ -190,14 +237,14 @@ scroll_add_sec_btn {
     font-size: x-large;
     color: white;
 }
-
+/* TODO: Need this image to be lower */
 .self-image {
-    margin-top: 10%;
-    margin-left: 10%;
-    flex: 0 0 auto;
-    position: relative; /* Add relative positioning */
+    margin-left: 13%;
+    margin-bottom: -50px;
     max-width: 700px;
     max-height: 700px;
+    height: -100px;
+    /* transform: translateZ(10px); */
 }
 
 /* custom scroll bar */

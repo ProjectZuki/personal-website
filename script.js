@@ -1,14 +1,47 @@
-/*
- * 
- * 
- */
 
 document.addEventListener("DOMContentLoaded", () => {
   // Show loading screen
   const loadingScreen = document.querySelector(".loading-screen");
-  const foreground = document.querySelector(".foreground");
   const content = document.querySelector(".content");
-  const title = document.querySelector(".title");
+  const aboutSection = document.querySelector(".about-text");
+
+  // Text for typing animation
+  const foregroundText_line1 = "Las Vegas, Nevada";
+  const foregroundText_line2 = "Website & Software Development/Engineering | UNLV Computer Science";
+
+  // Span elements where typing animation will be displayed
+  const foreground_line1Span = document.getElementById("typing-text-line1");
+  const foreground_line2Span = document.getElementById("typing-text-line2");
+  const cursorElement = document.getElementById("cursor-animation");
+
+  // Set delay for start of typing animation
+setTimeout(() => {
+  typeText(foregroundText_line1, foreground_line1Span, cursorElement, 0, 75, () => {
+    setTimeout(() => {
+      typeText(foregroundText_line2, foreground_line2Span, cursorElement, 0, 50, () => {
+        cursorElement.style.opacity = "1"; // Show cursor with blinking animation
+        setInterval(() => {
+          cursorElement.style.opacity = cursorElement.style.opacity === "0" ? "1" : "0";
+        }, 500);
+      });
+    }, 500); // Delay before starting line2 typing
+  });
+}, 1750);
+
+// Function to create typing animation
+function typeText(text, spanElement, cursorElement, index, typeSpeed, callback) {
+  if (index < text.length) {
+    spanElement.textContent += text[index];
+    index++;
+    setTimeout(() => {
+      typeText(text, spanElement, cursorElement, index, typeSpeed, callback);
+    }, typeSpeed);
+  } else {
+    callback(); // Call the callback function once typing is done
+  }
+}
+
+  // artificial oading screen
 
   setTimeout(() => {
     loadingScreen.style.opacity = "0";
