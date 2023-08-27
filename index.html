@@ -21,7 +21,9 @@
             <header class="text-center">
                 <h1 class="title title-slide-up">Willie Alcaraz</h1>
                 <h2 class="foreground">
-                    <span id="typing-text-line1"></span><br>
+                    <span id="typing-text-line1"></span>
+                    <!-- <h1 class="foreground">Las Vegas, Nevada</h1> -->
+                    <br>
                     <span id="typing-text-line2"></span>
                     <span id="cursor-animation">|</span>
                 </h2>
@@ -43,7 +45,10 @@
                         </div>
                     </div>
                 </section>
-                <h1 class="about-text-title">About</h1>
+                <h1 class="about-text-title" id="about-text-title">
+                    <span id="about-text-line"></span>
+                    <span id="about-cursor-animation" class="cursor-animation">|</span>
+                </h1>
                 <div class="about-text">
                     <p>
                         <i>Hello, and welcome.</i><br>
@@ -72,8 +77,12 @@
                     </p>
                 </div>
             </section>
-            <section class="image-section py-5">
-                <h2 class="text-center text-light">Gallery</h2>
+            <section class="image-section gallery-view py-5">
+                <!-- <h2 class="text-center text-light"> -->
+                <h2 class="gallery-text-title" id="gallery-text-title">
+                    <span id="gallery-text-line"></span>
+                    <span id="gallery-cursor-animation" class="cursor-animation">|</span>
+                </h2>
                 <h5 class="text-center text-light">
                     <p>
                         <i>Below are photos of exceptional work performed by our team at Drumbots.</i>
@@ -120,9 +129,12 @@
             </section>
     
             <!-- Container for additional details -->
-            <section class="py-5 additional-section">
+            <section class="py-5 projects-section">
                 <div class="container">
-                    <h1>Current Projects</h1>
+                    <h2 class="projects-text-title" id="projects-text-title">
+                        <span id="projects-text-line"></span>
+                        <span id="projects-cursor-animation" class="cursor-animation">|</span>
+                    </h2>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur 
                         dolorum fugit architecto totam. Reiciendis, consectetur laborum, esse 

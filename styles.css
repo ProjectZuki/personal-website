@@ -224,6 +224,13 @@ scroll_add_sec_btn {
     color: white;
 }
 
+.gallery-text-title {
+    text-align: center;
+    /* margin-left: 150px; */
+    margin-bottom: 20px;
+    color: rgb(162, 162, 162);
+}
+
 .container-fluid {
     background-color: #333;
     text-align: left;
