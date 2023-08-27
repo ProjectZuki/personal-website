@@ -1,55 +1,24 @@
+/**
+ * @brief Script for williealcaraz.me index.html
+ * 
+ * This script handles animations and interactions contained within index.html
+ *  for the website. Includes typing animation for titles, image gallery animation,
+ *  artificial loading screen, and more features to come.
+ * 
+ * @author Willie Alcaraz
+ * @version 1.0.0
+ * @date 28 August 2023
+ */
+
+const TITLE_TYPING_SPEED = 25;
+const SECONDARY_TITLE_TYPING_SPEED = 75;
 
 document.addEventListener("DOMContentLoaded", () => {
   // Show loading screen
   const loadingScreen = document.querySelector(".loading-screen");
   const content = document.querySelector(".content");
-  const aboutSection = document.querySelector(".about-text");
 
   // ------------------------ cursor text animations ------------------------ //
-
-  // --- title typing animation ---
-
-  // Text for typing animation
-  const foregroundText_line1 = "Las Vegas, Nevada";
-  const foregroundText_line2 = "Website & Software Development/Engineering | UNLV Computer Science";
-
-  // Span elements where typing animation will be displayed
-  const foreground_line1Span = document.getElementById("typing-text-line1");
-  const foreground_line2Span = document.getElementById("typing-text-line2");
-  const cursorElement = document.getElementById("cursor-animation");
-
-  // Show the text "on line 1" without typing animation
-  foreground_line1Span.textContent = foregroundText_line1;
-
-  // Set delay for start of typing animation for line2
-  setTimeout(() => {
-    typeText(foregroundText_line2, foreground_line2Span, cursorElement, 0, 50, () => {
-      cursorElement.style.opacity = "1"; // Show cursor with blinking animation
-      setInterval(() => {
-        cursorElement.style.opacity = cursorElement.style.opacity === "0" ? "1" : "0";
-      }, 500);
-    });
-  }, 1750); // Delay before starting line2 typing
-
-  // Function to create typing animation
-  function typeText(text, spanElement, cursorElement, index, typeSpeed, callback) {
-    if (index < text.length) {
-      spanElement.textContent += text[index];
-      index++;
-      setTimeout(() => {
-        typeText(text, spanElement, cursorElement, index, typeSpeed, callback);
-      }, typeSpeed);
-    } else {
-      callback(); // Call the callback function once typing is done
-    }
-  }
-
-  // --- "About" typing animation ---
-
-  // required variables for elements
-  const aboutText = "About";  // text to be animated
-  const aboutTitleSpan = document.getElementById("about-text-line");  // id of title to be animated
-  const aboutCursorElement = document.getElementById("about-cursor-animation"); // id of cursor element for animation
 
   /**
    * Function to create typing animation for specifed title text
@@ -61,24 +30,58 @@ document.addEventListener("DOMContentLoaded", () => {
    * @param {*} callback callback to execute when the string is finished processing
    */
   function animnateTitleText(text, spanElement, cursorElement, index, typeSpeed, callback) {
+    // base case, current index is within string
     if (index < text.length) {
       spanElement.textContent += text[index];
       index++;
       setTimeout(() => {
+        // recursive call function until completion
         animnateTitleText(text, spanElement, cursorElement, index, typeSpeed, callback);
-      }, typeSpeed);
+      }, typeSpeed); // delay amount for each character, speed of typing animatino
     } else {
       callback(); // Call the callback function once typing is done
     }
   }
 
-  // Intersection observer for the "About" title section
+  // --- title typing animation ---
+
+  // Text for typing animation
+  const foregroundText_line1 = "Las Vegas, Nevada";
+  const foregroundText_line2 = "Website & Software Development / Engineering | UNLV Computer Science";
+
+  // Span elements where typing animation will be displayed
+  const foreground_line1Span = document.getElementById("typing-text-line1");
+  const foreground_line2Span = document.getElementById("typing-text-line2");
+  const cursorElement = document.getElementById("cursor-animation");
+
+  // Show the text "on line 1" without typing animation, this is specific to this line
+  foreground_line1Span.textContent = foregroundText_line1;
+
+  // set delay for start of typing animation for line2
+  setTimeout(() => {
+    // call function to animate the string
+    animnateTitleText(foregroundText_line2, foreground_line2Span, cursorElement, 0, TITLE_TYPING_SPEED, () => {
+      cursorElement.style.opacity = "1"; // Show cursor with blinking animation
+      setInterval(() => {
+        cursorElement.style.opacity = cursorElement.style.opacity === "0" ? "1" : "0";
+      }, 500); // cursor element blink delay
+    });
+  }, 1750); // Delay before starting line2 typing
+
+  // --- "About" typing animation ---
+
+  // required variables for elements
+  const aboutText = "About";  // text to be animated
+  const aboutTitleSpan = document.getElementById("about-text-line");  // id of title to be animated
+  const aboutCursorElement = document.getElementById("about-cursor-animation"); // id of cursor element for animation
+
+  // intersection observer for the "About" title section will delay animation until user scrolls to about-text-title section
   const aboutTitleObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         // set delay for when we scroll, to the beginning of the animation
         setTimeout(() => {
-          animnateTitleText(aboutText, aboutTitleSpan, aboutCursorElement, 0, 75, () => {
+          animnateTitleText(aboutText, aboutTitleSpan, aboutCursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
             aboutCursorElement.style.opacity = "1"; // Show cursor with blinking animation
             setInterval(() => {
               aboutCursorElement.style.opacity = aboutCursorElement.style.opacity === "0" ? "1" : "0";
@@ -90,12 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
         aboutTitleObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.5 }); // threshold for intersection for animation to begin
 
   // Observe the "About" title section
   aboutTitleObserver.observe(document.querySelector(".about-text-title"));
 
   // --- "Gallery" title animation ---
+
+  // ... repeat above process
 
   // Text for "Gallery" title animation
   const galleryText = "Gallery";
@@ -107,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => {
-          animnateTitleText(galleryText, galleryTitleSpan, galleryCursorElement, 0, 50, () => {
+          animnateTitleText(galleryText, galleryTitleSpan, galleryCursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
             galleryCursorElement.style.opacity = "1"; // Show cursor with blinking animation
             setInterval(() => {
               galleryCursorElement.style.opacity = galleryCursorElement.style.opacity === "0" ? "1" : "0";
@@ -119,12 +124,14 @@ document.addEventListener("DOMContentLoaded", () => {
         galleryTitleObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 1.0 }); // threshold when to start animation
+  }, { threshold: 1.0 }); // threshold for intersection
 
   // Observe the "Gallery" title section once gallery-text-title has been scrolled to
   galleryTitleObserver.observe(document.querySelector(".gallery-text-title"));
 
   // --- Projects title animation ---
+
+  // ... repeat abov process
 
   // repeat above processes
   const projectsText = "Projects";
@@ -135,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => {
-          animnateTitleText(projectsText, projectsTitleSpan, projectsCursorElement, 0, 50, () => {
+          animnateTitleText(projectsText, projectsTitleSpan, projectsCursorElement, 0, SECONDARY_TITLE_TYPING_SPEED, () => {
             setInterval(() => {
               projectsCursorElement.style.opacity = projectsCursorElement.style.opacity == "0"? "1" : "0";
             }, 500);
@@ -146,94 +153,129 @@ document.addEventListener("DOMContentLoaded", () => {
         projectsTitleObserver.unobserve(entry.target);
       }
     });
-  }, {threshold: 1.0});
+  }, {threshold: 1.0}); // threshold or intersection
 
   projectsTitleObserver.observe(document.querySelector(".projects-text-title"));
 
   // ---------------------- end cursor text animations ---------------------- //
 
-  // artificial oading screen
+  // ---------------------- artificial loading screen ----------------------- //
 
+  // delay view of main screen
   setTimeout(() => {
     loadingScreen.style.opacity = "0";
 
     // after loading screen animation
     setTimeout(() => {
-      // hide loading screen
+      // hide loading screen after delay
       loadingScreen.style.display = "none";
       content.classList.remove("hidden");
       content.classList.add("content-slide-up");
-    }, 0); // delay time from load to main
+    }, 0); // delay time from loading animation to main screen
   }, 500) // delay time for loading animation
 
+  // -------------------- end artificial loading screen --------------------- //
+
+  // ----------------------- image gallery animation ------------------------ //
+
+  // retrieve all elements within image-section class name
   const imageSections = document.querySelectorAll(".image-section");
+  // retrieve first element within gallery-view class name
   const firstImageSection = document.querySelector(".gallery-view");
 
+  // iterate through each image-section instance
   imageSections.forEach(imageSection => {
+    // retrieve all elements with animated-image class name
     const animatedImages = imageSection.querySelectorAll('.animated-image');
 
+    // intersection observer will observe when image-section becomes visible
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          // apply animation effect for each animated-image instance
           animatedImages.forEach((image, index) => {
             setTimeout(() => {
+              // horizontal translation: horizontal position + translation amount in pixels * (image position + 1)
               const translateX = -50 + 20 * (index + 1);
               const opacity = 1;
 
+              // apply image styles
               image.style.opacity = opacity;
               image.style.transform = `translateX(${translateX}px)`;
-            }, index * 300);
+            }, index * 300); // delay each image animation
           });
-
+          
+          // unobserve section
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.5 }); // threshold for intersection
 
+    // observe section
     imageObserver.observe(imageSection);
   });
 
-  // Scroll to specific sections when user scrolls
-  let scrolling = false;
-  let previousScroll = window.scrollY;
+  // -------------------- end image gallery animations ---------------------- //
 
-  window.addEventListener("scroll", () => {
-    if (!scrolling) {
-      const scrollDirection = window.scrollY > previousScroll ? "down" : "up";
+  // --------------------- buttons to scroll to section --------------------- //
 
-      imageSections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight * 0.7 && scrollDirection === "down") {
-          scrolling = true;
-          section.scrollIntoView({ behavior: "smooth" });
-          setTimeout(() => {
-            scrolling = false;
-          }, 1000); // Adjust the delay as needed
-        }
-      });
+  // // scrolling state and position
+  // let scrolling = false;
+  // let previousScroll = window.scrollY;
 
-      previousScroll = window.scrollY;
-    }
-  });
+  // // listener for "scroll" event on window
+  // window.addEventListener("scroll", () => {
+  //   // check if scrolling is in effect
+  //   if (!scrolling) {
+  //     // scroll direction dependent on position
+  //     const scrollDirection = window.scrollY > previousScroll ? "down" : "up";
 
-  // Scroll to first section when the first button is clicked
+  //     // iterate through each section
+  //     imageSections.forEach(section => {
+  //       // top position of section, check if section is coming to view
+  //       const sectionTop = section.getBoundingClientRect().top;
+  //       if (sectionTop < window.innerHeight * 0.7 && scrollDirection === "down") {
+  //         scrolling = true;
+  //         // smooth scrolling to desired section
+  //         section.scrollIntoView({ behavior: "smooth" });
+
+  //         // delay reset scrolling
+  //         setTimeout(() => {
+  //           scrolling = false;
+  //         }, 1000); // delay amount
+  //       }
+  //     });
+
+  //     // update scroll position
+  //     previousScroll = window.scrollY;
+  //   }
+  // });
+  
+  // ---- gallery section scroll button ----
+  // retrieve element for specified class
   const scrollToImageSection = document.getElementById("scroll_images_btn");
+  // click event listener
   scrollToImageSection.addEventListener("click", () => {
+    // scroll to view on click
     firstImageSection.scrollIntoView({ behavior: "smooth" });
   });
 
-  // Scroll to additional section when the new button is clicked
-  const scrollToAdditionalSection = document.getElementById("scroll_add_sec_btn");
-  scrollToAdditionalSection.addEventListener("click", () => {
-    const additionalSection = document.querySelector(".additional-section");
-    additionalSection.scrollIntoView({ behavior: "smooth" });
+  // ---- projects section scroll button ----
+  const scrollToProjectsSection = document.getElementById("scroll_add_sec_btn");
+  scrollToProjectsSection.addEventListener("click", () => {
+    const projectsSection = document.querySelector(".projects-section");
+    projectsSection.scrollIntoView({ behavior: "smooth" });
   });
 
-  // Scroll to contact section when the new button is clicked
+  // ---- contact section scroll button ----
   const scrollToContact = document.getElementById("scroll_contact_btn");
   scrollToContact.addEventListener("click", () => {
     const contactSection = document.querySelector(".contact-section");
     contactSection.scrollIntoView({ behavior: "smooth" });
   });
 
+  // -------------------------- end scroll buttons -------------------------- //
+
 });
+
+/// **************************** EOF script.js **************************** ///
