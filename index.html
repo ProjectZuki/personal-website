@@ -5,231 +5,221 @@
     Date: 28 August 2023
  -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willie Alcaraz | Software</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="loading-screen">
-        <div class="loader"></div>
-    </div>
-    <div class="content hidden">
-        <!-- wrapper will act as body, for scrolling (another layer) -->
-        <div class="wrapper">
-            <div class="background">
-                <img src="images/code_background.png">
-            </div>
-            <header class="text-center">
-                <h1 class="title title-slide-up">Willie Alcaraz</h1>
-                <h2 class="foreground">
-                    <span id="subtitle-line1"></span>
-                    <br>
-                    <span class="subtitle-line2" id="subtitle-line2"></span>
-                    <span id="cursor-animation" class="cursor-animation">|</span>
-                </h2>
-            </header>
-
-            <div class="button-section">
-                <!-- button to scroll to speciic section in site -->
-                <button id="scroll_images_btn" class="btn btn-primary my-3">Gallery</button>
-                <button id="scroll_projects_btn" class="btn btn-primary my-3">Projects</button>
-                <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
-            </div>
-
-            <section class="py-5">
-                <!-- animate image of self -->
-                <section class="image-section py-5">
-                    <div class="self-image">
-                        <div class="col-md-4 mb-4">
-                            <img src="images/self_paris.jpg" class="animated-image">
-                        </div>
-                    </div>
-                </section>
-                <h1 class="about-text-title" id="about-text-title">
-                    <span id="about-text-line"></span>
-                    <span id="cursor-animation" class="cursor-animation">|</span>
-                </h1>
-                <div class="about-text">
-                    <p>
-                        <i>Hello, and welcome.</i><br>
-                        I am a student at <span style="color: #B10202;">University of Nevada Las Vegas</span>
-                        studying computer science, where I am actively pursuing a Bachelor of Science
-                        degree. Courses include object-oriented-programming, algorithms analysis, operating systems, and more.
-                        <br><br>
-                        Actively tutoring at <span style="color: #004990">College of Southern Nevada</span>
-                        Centers for Academic Success mentoring CS students, allowing them to excel
-                        in their studies and achieve a better understanding of programming languages, concepts,
-                        and algorithms.
-                        <br><br>
-                        Currently involved in the <strong>Drumbots</strong>, a world-renowned international LED 
-                        percussion act based in Las Vegas since 2016. We are well
-                        known as the <i>Knightline</i>, the official NHL drumline for the <i>2023 Stanley Cup Champions</i>,
-                        the <span style="color: #B4975A">Vegas Golden Knights</span>. Additionally, we
-                        perform for several large-scale corporate clients for entertainment.
-                        <br><br>
-                        As technology rapidly expands, the demand for software solutions, development, and engineering increase proportionately.
-                        My unique experiences in the entertainment industry help influence a blend of creativity and innovation, fueling a desire
-                        for software solutions that anticipate the needs of tomorrow's digital landscape.
-                        I envision the future of software thriving at the crossroads of creativity and technology.
-                        <br><br>
-                    </p>
-                </div>
-            </section>
-            <section class="image-section gallery-view py-5">
-                <!-- <h2 class="text-center text-light"> -->
-                <h2 class="gallery-text-title" id="gallery-text-title">
-                    <span id="gallery-text-line"></span>
-                    <span id="cursor-animation" class="cursor-animation">|</span>
-                </h2>
-                <h5 class="text-center text-light">
-                    <p>
-                        <i>Below are photos of exceptional work performed by our team at Drumbots.</i>
-                    </p>
-                </h5>
-                <div class="image-container-row">
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/vgk_knghtline.jpg" class="animated-image">
-                            <p class="caption">Photo with the team, Vegas Golden Knights Knightline</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/vgk_guy_fieri.JPG" class="animated-image">
-                            <p class="caption">Knightline with Guy Fieri, Flavortown, 2023</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/drumbots_paris.JPG" class="animated-image">
-                            <p class="caption">Drumbots, Ligue nationale de basket. Paris, France, 2018</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/drumbots_xs_gronk.JPG" class="animated-image">
-                            <p class="caption">Drumbots, XS Wynn with Rob Gronkowski, 2021</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/ceelo_toronto.jpg" class="animated-image">
-                            <p class="caption">Drumbots and CeeLo Green, Toronto, Canada 2019</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="image-container">
-                            <img src="images/aspen_times.jpg" class="animated-image">
-                            <p class="caption">Front page, The Aspen Times, 2021</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <!-- Container for additional details -->
-            <section class="py-5 projects-section">
-                <div class="container">
-                    <h2 class="projects-text-title" id="projects-text-title">
-                        <span id="projects-text-line"></span>
-                        <span id="cursor-animation" class="cursor-animation">|</span>
-                    </h2>
-                    <h3><strong>Personal Webpage</strong></h3>
-                    <p>
-                        This webpage showcases effects such as parallax as well as animations to create
-                        a responsive webpage to serve as a personal portfolio / website.<br>
-                        <i><u>Key Features:</u></i>
-                        <ul class="feature-list">
-                            <li>Dynamic title animations</li>
-                            <li>smooth parallax scrolling</li>
-                            <li>Stylized sections</li>
-                            <li>Interactive buttons for easy navigation</li>
-                        </ul>
-                        <br>
-                        <i><u>Technologies utilized:</u></i>
-                        <ul class="feature-list">
-                            <li><strong>HTML, CSS</strong> for structure and design</li>
-                            <li><strong>Javascript</strong> for interactive elements / animations</li>
-                            <li><strong>Intersection Observer API</strong> for triggering animations while scrolling</li>
-                            <li><strong>Bootstrap</strong> framework for responsiveness and screen size adaptation</li>
-                            <li><strong>GitHub</strong> utilization</li>
-                        </ul>
-                        <br><br>
-                    </p>
-                    <h3><strong>iOS App</strong></h3>
-                    <p>
-                        This iOS app is a prototype for creating and manageing events that aids in managing
-                        client and event inforamtion, inspired by my work in the entertainment industry.<br>
-                        <i><u>Key Features:</u></i>
-                        <ul class="feature-list">
-                            <li>
-                                <i>Event creation / management</i>: Easily create new events with essential details such as name,
-                                location, date, and additional notes.
-                            </li>
-                            <li>
-                                <i>Profile tracking:</i> Enables users to maintain client profiles by saving data such as name,
-                                contact details, email, and other data.
-                            </li>
-                        </ul>
-                        <br>
-                        <i><u>Technologies utilized:</u></i>
-                        <ul class="feature-list">
-                            <li><strong>SwiftUI Implementation</strong>: Allowing a smooth and dynamic user experience</li>
-                            <li><strong>Data storage</strong>: User-generated data is stored using JSON encoding and decoding.</li>
-                            <li><strong>Edit functionality</strong>: Ability to modify and delete details of a prevoiusly stored event, and saving the progress.</li>
-                            <li><strong>SwiftUI Navigation</strong>: utilizng navigation structures and vertical stacks to create seamless views transitions.</li>
-                        </ul>
-                        <br>
-                    </p>
-                </div>
-                
-            </section>
-
-            <section class="py-5 contact-section">
-                <div class="contact-container">
-                    <h1 class="contact-text-title" id="contact-text-title">
-                        <span id="contact-text-line"></span>
-                        <span id="cursor-animation" class="cursor-animation">|</span>
-                    </h1>
-                    <ul>
-                        <li class="contact-thing"><a href="mailto:willie.alcaraz@gmail.com"><img src="images/email_icon.png" alt="Email" class="contact-icon" /><strong>willie.alcaraz@gmail.com</strong></a></li>
-                        <li class="contact-thing"><a href="https://www.linkedin.com/in/williealcaraz/" target="_blank"><img src="images/LinkedIn_icon.png" alt="LinkedIn" class="contact-icon" />/williealcaraz</a></li>
-                        <li class="contact-thing"><a href="files/Willie_Alcaraz_Resume.pdf" target="_blank">Download Resume</a></li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Quote for the bottom of the webpage -->
-            <section class="py-5">
-                <div class="quote-container">
-                    <p>
-                        <span class="custom-font">"Anyone who has never made a mistake has never tried anything new." 
-                        <br>
-                        - <i>Albert Einstein</i>
-                        </span>
-                    </p>
-                </div>
-            </section>
-    
-            <!-- copyright footer -->
-            <footer class="text-center">
-                <div class="copyright-footer">&copy; 2023 Willie Alcaraz</div>
-            </footer>
-        </div>
-    </div>
-
-    <!-- jQuery (required by Bootstrap) from CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap JavaScript from CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- external js file -->
-    <script src="script.js"></script>
-</body>
-</html>
-
-<!-- ************************** EOF index.html ***************************** -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Willie Alcaraz | Software</title>
+     <link rel="stylesheet" href="styles.css">
+     <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+ </head>
+ <body>
+     <div class="loading-screen">
+         <div class="loader"></div>
+     </div>
+     <div class="content hidden">
+         <!-- wrapper will act as body, for scrolling (another layer) -->
+         <div class="wrapper">
+             <div class="background">
+                 <img src="images/code_background.png">
+             </div>
+             <header class="text-center">
+                 <h1 class="title title-slide-up">Willie Alcaraz</h1>
+                 <h2 class="foreground">
+                     <span id="subtitle-line1"></span>
+                     <br>
+                     <span class="subtitle-line2" id="subtitle-line2"></span>
+                     <span id="cursor-animation" class="cursor-animation">|</span>
+                 </h2>
+             </header>
+ 
+             <div class="button-section">
+                 <!-- button to scroll to speciic section in site -->
+                 <button id="scroll_images_btn" class="btn btn-primary my-3">Gallery</button>
+                 <button id="scroll_projects_btn" class="btn btn-primary my-3">Projects</button>
+                 <button id="scroll_contact_btn" class="btn btn-primary my-3">Contact</button>
+             </div>
+ 
+             <section class="py-5">
+                 <!-- animate image of self -->
+                 <section class="image-section py-5">
+                     <div class="self-image">
+                         <div class="col-md-4 mb-4">
+                             <img src="images/self_paris.jpg" class="animated-image">
+                         </div>
+                     </div>
+                 </section>
+                 <h1 class="about-text-title" id="about-text-title">
+                     <span id="about-text-line"></span>
+                     <span id="cursor-animation" class="cursor-animation">|</span>
+                 </h1>
+                 <div class="about-text">
+                     <p>
+                         <i>Hello, and welcome.</i><br>
+                         I am a student at <span style="color: #B10202;">University of Nevada Las Vegas</span>
+                         studying computer science, where I am actively pursuing a Bachelor of Science
+                         degree studying subjects such as object-oriented-programming, algorithms analysis, operating systems, and more.
+                         <br><br>
+                         Actively tutoring at <span style="color: #004990">College of Southern Nevada</span>
+                         Centers for Academic Success mentoring CS students, allowing them to excel
+                         in their studies and understanding of programming language concepts and algorithms.
+                         <br><br>
+                         Currently involved in the <strong>Drumbots</strong>, a world-renowned international LED 
+                         percussion act well known as the the official NHL drumline for
+                         the <span style="color: #B4975A">Vegas Golden Knights</span>.
+                         <br><br>
+                         The demand for software solutions increase at the rate of rapidly expanding technologies.
+                         I envision the future of software solutions for tomorrow's digital landscape thriving at 
+                         the crossroads of innovation and technology.
+                         <br><br>
+                     </p>
+                 </div>
+             </section>
+             <section class="image-section gallery-view py-5">
+                 <!-- <h2 class="text-center text-light"> -->
+                 <h2 class="gallery-text-title" id="gallery-text-title">
+                     <span id="gallery-text-line"></span>
+                     <span id="cursor-animation" class="cursor-animation">|</span>
+                 </h2>
+                 <h5 class="text-center text-light">
+                     <p>
+                         <i>Below are photos of exceptional work performed by our team at Drumbots.</i>
+                     </p>
+                 </h5>
+                 <div class="image-container-row">
+                     <div class="col-md-4 mb-4">
+                         <div class="image-container">
+                             <img src="images/vgk_knghtline.jpg" class="animated-image">
+                             <p class="caption">Photo with the team, Vegas Golden Knights Knightline</p>
+                         </div>
+                     </div>
+                     <div class="col-md-4 mb-4">
+                         <div class="image-container">
+                             <img src="images/vgk_guy_fieri.JPG" class="animated-image">
+                             <p class="caption">Knightline with Guy Fieri, Flavortown, 2023</p>
+                         </div>
+                     </div>
+                     <div class="col-md-4 mb-4">
+                         <div class="image-container">
+                             <img src="images/drumbots_paris.JPG" class="animated-image">
+                             <p class="caption">Drumbots, Ligue nationale de basket. Paris, France, 2018</p>
+                         </div>
+                     </div>
+                     <div class="col-md-4 mb-4">
+                         <div class="image-container">
+                             <img src="images/drumbots_xs_gronk.JPG" class="animated-image">
+                             <p class="caption">Drumbots, XS Wynn with Rob Gronkowski, 2021</p>
+                         </div>
+                     </div>
+                     <div class="col-md-4 mb-4">
+                         <div class="image-container">
+                             <img src="images/ceelo_toronto.jpg" class="animated-image">
+                             <p class="caption">Drumbots and CeeLo Green, Toronto, Canada 2019</p>
+                         </div>
+                     </div>
+                     <div class="col-md-4 mb-4">
+                         <div class="image-container">
+                             <img src="images/aspen_times.jpg" class="animated-image">
+                             <p class="caption">Front page, The Aspen Times, 2021</p>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+     
+             <!-- Container for additional details -->
+             <section class="py-5 projects-section">
+                 <div class="container">
+                     <h2 class="projects-text-title" id="projects-text-title">
+                         <span id="projects-text-line"></span>
+                         <span id="cursor-animation" class="cursor-animation">|</span>
+                     </h2>
+                     <h3><strong>Personal Webpage</strong></h3>
+                     <p>
+                         This webpage showcases effects such as parallax as well as animations to create
+                         a responsive webpage to serve as a personal portfolio / website.<br>
+                         <i><u>Key Features:</u></i>
+                         <ul class="feature-list">
+                             <li>Dynamic animations</li>
+                             <li>Smooth scrolling</li>
+                             <li>Parallax</li>
+                             <li>Stylized sections</li>
+                             <li>Interactive navigation buttons</li>
+                         </ul>
+                         <i><u>Technologies utilized:</u></i>
+                         <ul class="feature-list">
+                             <li>HTML, CSS</li>
+                             <li>Javascript</li>
+                             <li>Intersection Observer API</li>
+                             <li>Bootstrap framework</li>
+                             <li>GitHub</li>
+                         </ul>
+                         <br>
+                     </p>
+                     <h3><strong>iOS App</strong></h3>
+                     <p>
+                         This iOS app is a prototype for creating and manageing events that aids in managing
+                         client and event inforamtion, inspired by my work in the entertainment industry.<br>
+                         <i><u>Key Features:</u></i>
+                         <ul class="feature-list">
+                             <li>Event creation / management</li>
+                             <li>Client profile tracking</li>
+                         </ul>
+                         <i><u>Technologies utilized:</u></i>
+                         <ul class="feature-list">
+                             <li>SwiftUI Implementation</li>
+                             <li>Data storage: JSON encoding and decoding.</li>
+                             <li>Edit functionality</li>
+                             <li>Navigation struct, vstack</li>
+                         </ul>
+                         <br>
+                     </p>
+                 </div>
+                 
+             </section>
+ 
+             <section class="py-5 contact-section">
+                 <div class="contact-container">
+                     <h1 class="contact-text-title" id="contact-text-title">
+                         <span id="contact-text-line"></span>
+                         <span id="cursor-animation" class="cursor-animation">|</span>
+                     </h1>
+                     <ul>
+                         <li class="contact-thing"><a href="mailto:willie.alcaraz@gmail.com"><img src="images/email_icon.png" alt="Email" class="contact-icon" /><strong>willie.alcaraz@gmail.com</strong></a></li>
+                         <li class="contact-thing"><a href="https://www.linkedin.com/in/williealcaraz/" target="_blank"><img src="images/LinkedIn_icon.png" alt="LinkedIn" class="contact-icon" />/williealcaraz</a></li>
+                         <li class="contact-thing"><a href="files/Willie_Alcaraz_Resume.pdf" target="_blank">Download Resume</a></li>
+                     </ul>
+                 </div>
+             </section>
+ 
+             <!-- Quote for the bottom of the webpage -->
+             <section class="py-5">
+                 <div class="quote-container">
+                     <p>
+                         <span class="custom-font">"Anyone who has never made a mistake has never tried anything new." 
+                         <br>
+                         - <i>Albert Einstein</i>
+                         </span>
+                     </p>
+                 </div>
+             </section>
+     
+             <!-- copyright footer -->
+             <footer class="text-center">
+                 <div class="copyright-footer">&copy; 2023 Willie Alcaraz</div>
+             </footer>
+         </div>
+     </div>
+ 
+     <!-- jQuery (required by Bootstrap) from CDN -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- Bootstrap JavaScript from CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- external js file -->
+     <script src="script.js"></script>
+ </body>
+ </html>
+ 
+ <!-- ************************** EOF index.html ***************************** -->
+ 
