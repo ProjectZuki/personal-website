@@ -1,5 +1,7 @@
 # test-website
 
+# NOTE: This was a test repository before implementing the contents of the actual website.
+
 # Personal Portfolio Website
 
 Welcome to my personal portfolio website! This project showcases my skills in web development and provides a platform to share my experiences, projects, and interests.
